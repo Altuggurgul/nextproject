@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="relative isolate bg-white px-6 py-12 sm:py-8 lg:px-4">
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900">Projeniz hakkında konuşalım</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
