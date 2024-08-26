@@ -1,4 +1,8 @@
 import { ServerIcon, ShieldCheckIcon, LightBulbIcon, ChartBarIcon, CogIcon } from '@heroicons/react/24/outline';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export default function PowerBIHizmetleri() {
   const services = [
@@ -69,6 +73,7 @@ export default function PowerBIHizmetleri() {
     },
   ];
 
+
   const expertise = [
     'Azure Data Lake/Delta Lake',
     'Azure Data Factory, Azure Event Hub',
@@ -85,7 +90,8 @@ export default function PowerBIHizmetleri() {
 
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 font-display">
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Büyük Ekranlar için Grid Layout */}
+      <div className="hidden lg:grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <div 
             key={service.id} 
@@ -105,6 +111,38 @@ export default function PowerBIHizmetleri() {
         ))}
       </div>
 
+      {/* Küçük Ekranlar için Swiper Slider */}
+      <div className="lg:hidden">
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={1}
+          pagination={{
+            clickable: true,
+            el: '.custom-pagination', // Pagination'ı özelleştirmek için kullanılır
+          }}
+          modules={[Pagination]}
+        >
+          {services.map((service) => (
+            <SwiperSlide key={service.id}>
+              <div className="bg-white p-10 rounded-lg border border-gray-300 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-10 w-10 text-indigo-600" aria-hidden="true" />
+                  <h3 className="ml-4 text-xl leading-6 font-semibold text-gray-900">{service.title}</h3>
+                </div>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <ul className="text-base text-gray-500 list-disc pl-5 space-y-2">
+                  {service.items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* Pagination için özel bir div */}
+        <div className="custom-pagination mt-4 flex justify-center"></div>
+      </div>
+
       {/* Yeni Eklenen Bölüm */}
       <div className="mt-16">
         <h3 className="text-2xl leading-tight font-semibold tracking-tight text-gray-900 text-left mb-8">
@@ -118,9 +156,6 @@ export default function PowerBIHizmetleri() {
           ))}
         </div>
       </div>
-
-
-
     </div>
   );
 }
