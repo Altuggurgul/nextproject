@@ -20,67 +20,67 @@ import { useRouter } from 'next/router';
 const items = [
   {
     category: 'Finance',
-    name: 'Kart Başlık 1',
+    name: 'Rapor 1',
     description: 'Bu, finans sektörüne yönelik bir raporun özetini içerir.',
     link: 'https://www.example.com/finance-report'
   },
   {
     category: 'Sales',
-    name: 'Kart Başlık 2',
+    name: 'Rapor 2',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://www.example.com/sales-report'
   },
   {
     category: 'Sales',
-    name: 'Kart Başlık 3',
+    name: 'Rapor 3',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://www.example.com/hr-report'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 4',
+    name: 'Rapor 4',
     description: 'Pazarlama stratejileri ve müşteri kazanımı üzerine analizler.',
     link: 'https://www.example.com/marketing-report'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 5',
+    name: 'Rapor 5',
     description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'HR',
-    name: 'Kart Başlık 6',
+    name: 'Rapor 6',
     description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 7',
+    name: 'Rapor 7',
     description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 8',
+    name: 'Rapor 8',
     description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'Sales',
-    title: 'Kart Başlık 9',
+    name: 'Rapor 9',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
   },
   {
     category: 'Sales',
-    title: 'Kart Başlık 10',
+    name: 'Rapor 10',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
   },
   {
     category: 'HR',
-    title: 'Kart Başlık 11',
+    name: 'Rapor 11',
     description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
     link: 'https://www.example.com/marketing-trends'
   },
@@ -95,8 +95,9 @@ const user = {
 }
 const navigation = [
   { name: 'Dashboard', href: '/', current: true },
-  { name: 'Predictive Analytics', href: '/bilgi', current: false, requiresAuth: true },
-  { name: 'Contact', href: '/contact', current: false },
+  { name: 'Veri Analitiği', href: '/verianalitigi', current: false },
+  { name: 'POWER BI', href: '/bilgi', current: false},
+  { name: 'İletişim', href: '/contact', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -281,30 +282,7 @@ export default function Example() {
                     </button>
 
                     {/* Profile dropdown */}
-                    <Menu as="div" className="relative ml-3 flex-shrink-0">
-                      <div>
-                        <MenuButton className="relative flex rounded-full bg-indigo-600 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
-                          <span className="absolute -inset-1.5" />
-                          <span className="sr-only">Open user menu</span>
-                          <img alt="" src={user.imageUrl} className="h-8 w-8 rounded-full" />
-                        </MenuButton>
-                      </div>
-                      <MenuItems
-                        transition
-                        className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                      >
-                      {userNavigation.map((item) => (
-                        <MenuItem key={item.name}>
-                          <Link href={item.href} legacyBehavior>
-                            <a 
-                            className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                              {item.name}
-                            </a>
-                          </Link>
-                        </MenuItem>
-                      ))}
-                      </MenuItems>
-                    </Menu>
+
                   </div>
                 </div>
               </div>
@@ -312,21 +290,22 @@ export default function Example() {
 
             <DisclosurePanel className="lg:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
-                {navigation.map((item) => (
-                  <DisclosureButton
-                  onClick={(e) => handleLinkClick(e, item.requiresAuth)}
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? 'bg-indigo-700 text-white' : 'text-white hover:bg-indigo-500 hover:bg-opacity-75',
-                      'block rounded-md px-3 py-2 text-base font-medium',
-                    )}
-                  >
-                    {item.name}
-                  </DisclosureButton>
-                ))}
+              {navigation.map((item) => (
+            <DisclosureButton
+              onClick={(e) => handleLinkClick(e, item.requiresAuth)}
+              key={item.name}
+              as="div"
+              aria-current={item.current ? 'page' : undefined}
+              className={classNames(
+                item.current ? 'bg-indigo-700 text-white' : 'text-white hover:bg-indigo-500 hover:bg-opacity-75',
+                'block rounded-md px-3 py-2 text-base font-medium'
+              )}
+            >
+              <Link href={item.href} passHref legacyBehavior>
+                <a className="block w-full h-full">{item.name}</a>
+              </Link>
+            </DisclosureButton>
+          ))}
               </div>
               <div className="border-t border-indigo-700 pb-3 pt-4">
                 <div className="flex items-center px-5">

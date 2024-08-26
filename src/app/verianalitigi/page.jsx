@@ -15,73 +15,73 @@ import {
 } from '@headlessui/react';
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import PowerBIHizmetleri from '@/components/bilgigiris'
+import Cardsdata from '@/components/verianalitigi'
 
 
 const items = [
   {
     category: 'Finance',
-    name: 'Kart Başlık 1',
+    name: 'Rapor 1',
     description: 'Bu, finans sektörüne yönelik bir raporun özetini içerir.',
     link: 'https://www.example.com/finance-report'
   },
   {
     category: 'Sales',
-    name: 'Kart Başlık 2',
+    name: 'Rapor 2',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://www.example.com/sales-report'
   },
   {
     category: 'Sales',
-    name: 'Kart Başlık 3',
+    name: 'Rapor 3',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://www.example.com/hr-report'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 4',
+    name: 'Rapor 4',
     description: 'Pazarlama stratejileri ve müşteri kazanımı üzerine analizler.',
     link: 'https://www.example.com/marketing-report'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 5',
+    name: 'Rapor 5',
     description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'HR',
-    name: 'Kart Başlık 6',
+    name: 'Rapor 6',
     description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 7',
+    name: 'Rapor 7',
     description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'Marketing',
-    name: 'Kart Başlık 8',
+    name: 'Rapor 8',
     description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
     category: 'Sales',
-    name: 'Kart Başlık 9',
+    name: 'Rapor 9',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
   },
   {
     category: 'Sales',
-    name: 'Kart Başlık 10',
+    name: 'Rapor 10',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
   },
   {
     category: 'HR',
-    name: 'Kart Başlık 11',
+    name: 'Rapor 11',
     description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
     link: 'https://www.example.com/marketing-trends'
   },
@@ -96,8 +96,8 @@ const user = {
 }
 const navigation = [
   { name: 'Dashboard', href: '/', current: false },
-  { name: 'Veri Analitiği', href: '/verianalitigi', current: false },
-  { name: 'POWER BI', href: '/bilgi', current: true},
+  { name: 'Veri Analitiği', href: '/verianalitigi', current: true },
+  { name: 'POWER BI', href: '/bilgi', current: false},
   { name: 'İletişim', href: '/contact', current: false },
 ]
 const userNavigation = [
@@ -344,8 +344,9 @@ export default function Example() {
           <div className="relative py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center lg:flex-row lg:justify-between">
         <div>
-          <h1 className="mt-1 text-3xl font-bold tracking-tight text-white">POWER BI Hizmetler</h1>
+          <h1 className="mt-1 text-3xl font-bold tracking-tight text-white">Veri Analitiği</h1>
         </div>
+
       </div>
 
     </div>
@@ -356,7 +357,7 @@ export default function Example() {
             <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
               
               {/* Your content */}
-              <PowerBIHizmetleri/>
+              <Cardsdata searchTerm={searchTerm} category={selectedCategory}/>
               </div>
           </div>
         </main>

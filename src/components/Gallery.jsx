@@ -44,7 +44,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Finance',
       imageSrc: resim1,
       modalImages: report1Images,
-      title: 'Kart Başlık 1',
+      title: 'Rapor 1',
       description: 'Bu, finans sektörüne yönelik bir raporun özetini içerir.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiZTc5NzJhYzItYjU4Ny00MzkwLWJmMjMtODU1Y2M0ZTFmOGI3IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
@@ -52,7 +52,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Sales',
       imageSrc: resim2,
       modalImages: report2Images,
-      title: 'Kart Başlık 2',
+      title: 'Rapor 2',
       description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
       link: 'https://www.example.com/sales-report'
     },
@@ -60,7 +60,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Sales',
       imageSrc: resim3,
       modalImages: report3Images,
-      title: 'Kart Başlık 3',
+      title: 'Rapor 3',
       description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
       link: 'https://www.example.com/hr-report'
     },
@@ -68,7 +68,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Marketing',
       imageSrc: resim4,
       modalImages: report4Images,
-      title: 'Kart Başlık 4',
+      title: 'Rapor 4',
       description: 'Pazarlama stratejileri ve müşteri kazanımı üzerine analizler.',
       link: 'https://www.example.com/marketing-report'
     },
@@ -76,7 +76,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Marketing',
       imageSrc: resim5,
       modalImages: report5Images,
-      title: 'Kart Başlık 5',
+      title: 'Rapor 5',
       description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiY2FiZGI5OTUtZDU3MC00Yzg0LTg3ZTItNGE4NmVhOGIzNTlkIiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
@@ -84,7 +84,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'HR',
       imageSrc: resim6,
       modalImages: report6Images,
-      title: 'Kart Başlık 6',
+      title: 'Rapor 6',
       description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
       link: 'https://www.example.com/marketing-trends'
     },
@@ -92,7 +92,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Marketing',
       imageSrc: resim7,
       modalImages: report7Images,
-      title: 'Kart Başlık 7',
+      title: 'Rapor 7',
       description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
       link: 'https://www.example.com/marketing-trends'
     },
@@ -100,7 +100,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Marketing',
       imageSrc: resim8,
       modalImages: report8Images,
-      title: 'Kart Başlık 8',
+      title: 'Rapor 8',
       description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
@@ -108,7 +108,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Sales',
       imageSrc: resim9,
       modalImages: report9Images,
-      title: 'Kart Başlık 9',
+      title: 'Rapor 9',
       description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
@@ -116,7 +116,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'Sales',
       imageSrc: resim10,
       modalImages: report10Images,
-      title: 'Kart Başlık 10',
+      title: 'Rapor 10',
       description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
@@ -124,7 +124,7 @@ const Cards = ({ searchTerm = '', category }) => {
       category: 'HR',
       imageSrc: resim11,
       modalImages: report11Images,
-      title: 'Kart Başlık 11',
+      title: 'Rapor 11',
       description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
       link: 'https://www.example.com/marketing-trends'
     },

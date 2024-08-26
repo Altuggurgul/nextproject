@@ -1,90 +1,126 @@
-'use client';
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import { ServerIcon, ShieldCheckIcon, LightBulbIcon, ChartBarIcon, CogIcon } from '@heroicons/react/24/outline';
 
-const CardForm = ({ onSubmit }) => {
-  const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
-  const [description, setDescription] = useState('');
-  const [imageSrc, setImageSrc] = useState('');
-  const [link, setLink] = useState('');
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newCard = {
-      title,
-      category,
-      description,
-      imageSrc,
-      link,
-    };
-    onSubmit(newCard);
-  };
+export default function PowerBIHizmetleri() {
+  const services = [
+    {
+      id: 1,
+      title: 'Problem Tespiti ve Değerlendirme',
+      icon: LightBulbIcon,
+      description: 'Power BI sorunlarınızın ve gereksinimlerinizin belirlenmesi ve değerlendirilmesi',
+      items: [
+        'Kullanılmayan raporların tespiti',
+        'Veritabanı bağlantılarının kontrolü',
+        'Performans sorunları olan dashboardların belirlenmesi',
+        'Yanlış yapılandırılmış veri modellerinin düzeltilmesi',
+        'İşlem sürelerini uzatan veri akışlarının (Dataflow) optimize edilmesi',
+      ],
+    },
+    {
+      id: 2,
+      title: 'Uygulama ve Entegrasyon',
+      icon: ChartBarIcon,
+      description: 'Power BI uygulamaları ve entegrasyon hizmetleri',
+      items: [
+        'Veri kaynaklarının Power BI ile entegrasyonu',
+        'Mevcut uygulamalarla Power BI entegrasyonu sağlama',
+        'Azure Data Factory ile veri akışlarının (Dataflow) yapılandırılması',
+        'SQL Server üzerinden veri senkronizasyonu',
+        'Veri ambarından Power BI’a veri çekme',
+      ],
+    },
+    {
+      id: 3,
+      title: 'Özelleştirme ve Tasarım',
+      icon: CogIcon,
+      description: 'Power BI panolarınızı iş ihtiyaçlarınıza göre özelleştirme',
+      items: [
+        'Şirket logonuz ve renklerinizle uyumlu dashboard tasarımı',
+        'Kullanıcı bazlı özel raporlar oluşturma (RLS - Satır Düzeyinde Güvenlik)',
+        'Veri görselleştirme şablonlarının geliştirilmesi',
+        'Datamart yapısının optimize edilmesi ve yönetimi',
+        'Mobil cihazlara uygun dashboard dizaynı',
+      ],
+    },
+    {
+      id: 4,
+      title: 'Geliştirme Hizmetleri',
+      icon: ServerIcon,
+      description: 'Power BI raporları ve iş süreçleri için özel geliştirmeler',
+      items: [
+        'Özel DAX ve M sorgularının yazılması',
+        'SSAS Küpleri ve Tabular Modeller oluşturma',
+        'Veri modeli optimizasyonu',
+        'ETL süreçlerinin geliştirilmesi',
+        'Veri setlerinin Power BI’a entegre edilmesi',
+      ],
+    },
+    {
+      id: 5,
+      title: 'Test, Eğitim ve Destek',
+      icon: ShieldCheckIcon,
+      description: 'Power BI çözümleriniz için test, eğitim ve sürekli destek hizmetleri',
+      items: [
+        'Kullanıcı kabul testlerinin gerçekleştirilmesi',
+        'Veri doğruluğunun kontrol edilmesi',
+        'Power BI eğitimi ile kullanıcıların bilgilendirilmesi',
+        'Power BI raporlarının düzenli bakım ve optimizasyonu',
+        '7/24 teknik destek sağlanması',
+      ],
+    },
+  ];
+
+  const expertise = [
+    'Azure Data Lake/Delta Lake',
+    'Azure Data Factory, Azure Event Hub',
+    'Azure Synapse Analytics',
+    'SQL Server Analysis Services (SSAS)',
+    'SQL Server Integration Services (SSIS)',
+    'İlişkisel veri tabanlarına, OLAP küplerine, Tabular Modellerine ve REST API\'lerine dayalı Power BI raporları oluşturma',
+    'SSAS Küpleri/Tabular Modelleri oluşturma ve MDX ve DAX ile hesaplamalar ve hesaplanmış ölçümler yazma',
+    'T-SQL Stored Procedures yazma, veri birleştirme, veri toplama, veri birliği ve veri dönüştürme hizmetleri sunma',
+    'Power BI Report Server, Power BI Service',
+    'Microsoft Fabric',
+    'SQL Veritabanı, SQL Veri Ambarı',
+  ];
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6">Yeni Kart Oluştur</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Başlık:</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Kategori:</label>
-          <input
-            type="text"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Açıklama:</label>
-          <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Resim URL:</label>
-          <input
-            type="text"
-            value={imageSrc}
-            onChange={(e) => setImageSrc(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Link:</label>
-          <input
-            type="text"
-            value={link}
-            onChange={(e) => setLink(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-            required
-          />
-        </div>
-        <div className="flex justify-end">
-          <button
-            type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+    <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 font-display">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((service) => (
+          <div 
+            key={service.id} 
+            className="bg-white p-10 rounded-lg border border-gray-300 shadow-sm hover:shadow-md transition-shadow duration-300"
           >
-            Kartı Ekle
-          </button>
+            <div className="flex items-center mb-4">
+              <service.icon className="h-10 w-10 text-indigo-600" aria-hidden="true" />
+              <h3 className="ml-4 text-xl leading-6 font-semibold text-gray-900">{service.title}</h3>
+            </div>
+            <p className="text-gray-600 mb-4">{service.description}</p>
+            <ul className="text-base text-gray-500 list-disc pl-5 space-y-2">
+              {service.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      {/* Yeni Eklenen Bölüm */}
+      <div className="mt-16">
+        <h3 className="text-2xl leading-tight font-semibold tracking-tight text-gray-900 text-left mb-8">
+          Deneyimler
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4 text-gray-600 text-base">
+          {expertise.map((item, index) => (
+            <div key={index}>
+              <li className="list-disc list-inside">{item}</li>
+            </div>
+          ))}
         </div>
-      </form>
+      </div>
+
+
+
     </div>
   );
-};
-
-export default CardForm;
+}
