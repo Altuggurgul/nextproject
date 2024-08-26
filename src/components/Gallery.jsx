@@ -175,7 +175,7 @@ const Cards = ({ searchTerm = '', category }) => {
         {filteredCards.map((card, index) => (
           <SwiperSlide key={index}>
             <div
-              className="bg-white rounded-lg shadow-sm border font-display hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1 cursor-pointer"
+              className="bg-white rounded-lg shadow-sm border font-display hover:shadow-xl transition-shadow duration-300 overflow-hidden transform cursor-pointer"
               onClick={() => openModal(card)}
             >
               <img
@@ -206,8 +206,8 @@ const Cards = ({ searchTerm = '', category }) => {
       </Swiper>
 
       {selectedCard && (
-        <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300">
-          <div className="bg-gray-100 w-full md:w-3/4 lg:w-2/3 xl:w-full h-5/6 md:h-auto relative rounded-lg shadow-lg flex flex-col z-60 overflow-hidden">
+        <div className="fixed inset-0 px-4 backdrop-blur-sm bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300">
+          <div className="bg-gray-100 w-full px-4 md:w-3/4 lg:w-2/3 xl:w-full h-5/6 md:h-auto relative rounded-lg shadow-lg flex flex-col z-60 overflow-hidden">
             <button
               className="absolute top-4 right-4 text-gray-400 bg-opacity-70 p-2 z-70 focus:outline-none transition-transform transform hover:text-gray-700"
               onClick={closeModal}
