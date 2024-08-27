@@ -7,17 +7,18 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import resim1 from '@/images/Report1/01_Satıs_page_1.jpg';
-import resim2 from '@/images/Report2/001_Satıs_page_1.jpg';
-import resim3 from '@/images/Report3/1Satıs_page_1.jpg';
+import resim1 from '@/images/Report1/07_Sat_page_1.jpg';
+import resim2 from '@/images/Report2/1Satıs_page_1.jpg';
+import resim3 from '@/images/Report3/Stok__page_1.jpg';
 import resim4 from '@/images/Report4/1_Uru_page_1.jpg';
-import resim5 from '@/images/Report5/07_Sat_page_1.jpg';
+import resim5 from '@/images/Report5/001_Satıs_page_1.jpg';
 import resim6 from '@/images/Report6/2HR_Da_page_1.jpg';
-import resim7 from '@/images/Report7/3_Cal_page_1.jpg';
+import resim7 from '@/images/Report7/Sosya_page_1.jpg';
 import resim8 from '@/images/Report8/Muste_page_1.jpg';
 import resim9 from '@/images/Report9/1_Fin_page_1.jpg';
 import resim10 from '@/images/Report10/1_Web_page_1.jpg';
 import resim11 from '@/images/Report11/HR_Da_page_1.jpg';
+import resim12 from '@/images/Report12/Satıs_page_1.jpg';
 
 const importAllImages = (r) => {
   return r.keys().map(r);
@@ -38,15 +39,16 @@ const Cards = ({ searchTerm = '', category }) => {
   const report9Images = importAllImages(require.context('@/images/Report9', false, /\.(jpe?g)$/));
   const report10Images = importAllImages(require.context('@/images/Report10', false, /\.(jpe?g)$/));
   const report11Images = importAllImages(require.context('@/images/Report11', false, /\.(jpe?g)$/));
+  const report12Images = importAllImages(require.context('@/images/Report12', false, /\.(jpe?g)$/));
 
   const cardsData = [
     {
-      category: 'Finance',
+      category: 'Sales',
       imageSrc: resim1,
       modalImages: report1Images,
       title: 'Rapor 1',
-      description: 'Bu, finans sektörüne yönelik bir raporun özetini içerir.',
-      link: 'https://app.powerbi.com/view?r=eyJrIjoiZTc5NzJhYzItYjU4Ny00MzkwLWJmMjMtODU1Y2M0ZTFmOGI3IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiY2FiZGI5OTUtZDU3MC00Yzg0LTg3ZTItNGE4NmVhOGIzNTlkIiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
       category: 'Sales',
@@ -54,7 +56,7 @@ const Cards = ({ searchTerm = '', category }) => {
       modalImages: report2Images,
       title: 'Rapor 2',
       description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-      link: 'https://www.example.com/sales-report'
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiM2QwMzM1YzUtY2VlNi00ODM5LWI2ODAtM2ZiNDEyNzkwNjQ3IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
       category: 'Sales',
@@ -62,7 +64,7 @@ const Cards = ({ searchTerm = '', category }) => {
       modalImages: report3Images,
       title: 'Rapor 3',
       description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-      link: 'https://www.example.com/hr-report'
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiNDQ1YmEzZjYtOGZhNC00OGVlLTg0MTgtYjQ3OTI0YWE2MDg4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
       category: 'Marketing',
@@ -70,15 +72,15 @@ const Cards = ({ searchTerm = '', category }) => {
       modalImages: report4Images,
       title: 'Rapor 4',
       description: 'Pazarlama stratejileri ve müşteri kazanımı üzerine analizler.',
-      link: 'https://www.example.com/marketing-report'
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiZjlmMjRhY2EtYjg2OS00ZWY3LWE1ZTUtN2ZiMTQ0MzhmMWI5IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
-      category: 'Marketing',
+      category: 'Sales',
       imageSrc: resim5,
       modalImages: report5Images,
       title: 'Rapor 5',
-      description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
-      link: 'https://app.powerbi.com/view?r=eyJrIjoiY2FiZGI5OTUtZDU3MC00Yzg0LTg3ZTItNGE4NmVhOGIzNTlkIiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiZTc5NzJhYzItYjU4Ny00MzkwLWJmMjMtODU1Y2M0ZTFmOGI3IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
       category: 'HR',
@@ -86,38 +88,38 @@ const Cards = ({ searchTerm = '', category }) => {
       modalImages: report6Images,
       title: 'Rapor 6',
       description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
-      link: 'https://www.example.com/marketing-trends'
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYjc0ZTA5MmEtZWY3OC00Y2RlLWE2N2ItZDk1OTc1ZGQ5NDkyIiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
       category: 'Marketing',
       imageSrc: resim7,
       modalImages: report7Images,
       title: 'Rapor 7',
-      description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
-      link: 'https://www.example.com/marketing-trends'
+      description: 'Sosyal medya platformlarında içerik görüntülenme analizleri.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYTZhODMxNGEtZjQ4ZC00NjNjLTg2MmUtODYzM2NiNDkyYWIxIiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
       category: 'Marketing',
       imageSrc: resim8,
       modalImages: report8Images,
       title: 'Rapor 8',
-      description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
+      description: 'Müşteri bazında satış, karlılık ve performans analizleri.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
-      category: 'Sales',
+      category: 'Finance',
       imageSrc: resim9,
       modalImages: report9Images,
       title: 'Rapor 9',
-      description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
+      description: 'Bu, finans sektörüne yönelik bir raporun özetini içerir.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
-      category: 'Sales',
+      category: 'Marketing',
       imageSrc: resim10,
       modalImages: report10Images,
       title: 'Rapor 10',
-      description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
+      description: 'Web sitesi sayfa görüntülenme ve kullanıcı davranış analizleri.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
     {
@@ -126,7 +128,15 @@ const Cards = ({ searchTerm = '', category }) => {
       modalImages: report11Images,
       title: 'Rapor 11',
       description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
-      link: 'https://www.example.com/marketing-trends'
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiZDNmZmNmMWQtNWM1Yy00ZmIwLTgwYTYtYWViYTZkMmE1ZWMxIiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Sales',
+      imageSrc: resim12,
+      modalImages: report12Images,
+      title: 'Rapor 12',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
   ];
 

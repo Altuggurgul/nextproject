@@ -19,7 +19,7 @@ import { useRouter } from 'next/router';
 
 const items = [
   {
-    category: 'Finance',
+    category: 'Sales',
     name: 'Rapor 1',
     description: 'Bu, finans sektörüne yönelik bir raporun özetini içerir.',
     link: 'https://www.example.com/finance-report'
@@ -43,9 +43,9 @@ const items = [
     link: 'https://www.example.com/marketing-report'
   },
   {
-    category: 'Marketing',
+    category: 'Sales',
     name: 'Rapor 5',
-    description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://www.example.com/marketing-trends'
   },
   {
@@ -67,13 +67,13 @@ const items = [
     link: 'https://www.example.com/marketing-trends'
   },
   {
-    category: 'Sales',
+    category: 'Finance',
     name: 'Rapor 9',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
   },
   {
-    category: 'Sales',
+    category: 'Marketing',
     name: 'Rapor 10',
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
@@ -83,6 +83,12 @@ const items = [
     name: 'Rapor 11',
     description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
     link: 'https://www.example.com/marketing-trends'
+  },
+  {
+    category: 'Sales',
+    name: 'Rapor 12',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
   },
 ];
 
