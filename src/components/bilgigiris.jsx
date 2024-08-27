@@ -29,7 +29,7 @@ export default function PowerBIHizmetleri() {
       items: [
         'Veri kaynaklarının Power BI ile entegrasyonu',
         'Mevcut uygulamalarla Power BI entegrasyonu sağlama',
-        'Azure Data Factory ile veri akışlarının (Dataflow) yapılandırılması',
+        'Veri akışlarının (Dataflow) yapılandırılması',
         'SQL Server üzerinden veri senkronizasyonu',
         'Veri ambarından Power BI’a veri çekme',
       ],
@@ -41,9 +41,7 @@ export default function PowerBIHizmetleri() {
       description: 'Power BI panolarınızı iş ihtiyaçlarınıza göre özelleştirme',
       items: [
         'Şirket logonuz ve renklerinizle uyumlu dashboard tasarımı',
-        'Kullanıcı bazlı özel raporlar oluşturma (RLS - Satır Düzeyinde Güvenlik)',
         'Veri görselleştirme şablonlarının geliştirilmesi',
-        'Datamart yapısının optimize edilmesi ve yönetimi',
         'Mobil cihazlara uygun dashboard dizaynı',
       ],
     },
@@ -58,6 +56,8 @@ export default function PowerBIHizmetleri() {
         'Veri modeli optimizasyonu',
         'ETL süreçlerinin geliştirilmesi',
         'Veri setlerinin Power BI’a entegre edilmesi',
+        'Kullanıcı bazlı özel raporlar oluşturma (RLS - Satır Düzeyinde Güvenlik)',
+        'Datamart yapısının optimize edilmesi ve yönetimi',
       ],
     },
     {
@@ -77,9 +77,7 @@ export default function PowerBIHizmetleri() {
 
 
   const expertise = [
-    'Azure Data Lake/Delta Lake',
-    'Azure Data Factory, Azure Event Hub',
-    'Azure Synapse Analytics',
+    'Python',
     'SQL Server Analysis Services (SSAS)',
     'SQL Server Integration Services (SSIS)',
     'İlişkisel veri tabanlarına, OLAP küplerine, Tabular Modellerine ve REST API\'lerine dayalı Power BI raporları oluşturma',
@@ -88,6 +86,7 @@ export default function PowerBIHizmetleri() {
     'Power BI Report Server, Power BI Service',
     'Microsoft Fabric',
     'SQL Veritabanı, SQL Veri Ambarı',
+    'Figma'
   ];
 
 
