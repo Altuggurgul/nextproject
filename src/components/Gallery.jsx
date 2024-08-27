@@ -216,73 +216,75 @@ const Cards = ({ searchTerm = '', category }) => {
       </Swiper>
 
       {selectedCard && (
-        <div className="fixed inset-0 px-4 backdrop-blur-sm bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300">
-          <div className="bg-gray-100 w-full px-4 md:w-3/4 lg:w-2/3 xl:w-full h-5/6 md:h-auto relative rounded-lg shadow-lg flex flex-col z-60 overflow-hidden">
-            <button
-              className="absolute top-4 right-4 text-gray-400 bg-opacity-70 p-2 z-70 focus:outline-none transition-transform transform hover:text-gray-700"
-              onClick={closeModal}
-              style={{ zIndex: 1000 }}
-            >
-              <XMarkIcon aria-hidden="true" className="h-8 w-8" />
-            </button>
-            <div className="flex-grow flex flex-col justify-center items-center relative pt-4">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedCard.title}</h3>
-              <p className="text-gray-700 mb-4">{selectedCard.description}</p>
-              
-              {/* Slider for Modal */}
-              <Swiper
-                ref={swiperRef}
-                spaceBetween={10}
-                navigation
-                onSlideChange={(swiper) => {
-                  const thumbnails = document.querySelectorAll('.thumbnail-image');
-                  thumbnails.forEach((thumbnail, index) => {
-                    if (index === swiper.activeIndex) {
-                      thumbnail.classList.add('opacity-50');
-                      thumbnail.classList.remove('opacity-100');
-                    } else {
-                      thumbnail.classList.add('opacity-100');
-                      thumbnail.classList.remove('opacity-50');
-                    }
-                  });
-                }}
-                modules={[Pagination, Navigation]}
-                className="w-full h-full max-h-[calc(90vh-120px)]"
-              >
-                {selectedCard.modalImages.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      src={image.default.src}
-                      alt={`Image ${index + 1}`}
-                      className="w-full xl:h-fit object-contain"
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+  <div className="fixed inset-0 px-4 backdrop-blur-sm bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300">
+    <div className="bg-gray-100 w-full px-4 md:w-3/4 lg:w-2/3 xl:w-3/4 2xl:w-2/3 h-auto relative rounded-lg shadow-lg flex flex-col z-60 overflow-hidden">
+      <button
+        className="absolute top-4 right-4 text-gray-400 bg-opacity-70 p-2 z-70 focus:outline-none transition-transform transform hover:text-gray-700"
+        onClick={closeModal}
+        style={{ zIndex: 1000 }}
+      >
+        <XMarkIcon aria-hidden="true" className="h-8 w-8" />
+      </button>
+      <div className="flex-grow flex flex-col justify-center items-center relative pt-4">
+        <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">{selectedCard.title}</h3>
+        <p className="text-gray-700 mb-4 text-center">{selectedCard.description}</p>
+        
+        {/* Slider for Modal */}
+        <Swiper
+          ref={swiperRef}
+          spaceBetween={10}
+          navigation
+          onSlideChange={(swiper) => {
+            const thumbnails = document.querySelectorAll('.thumbnail-image');
+            thumbnails.forEach((thumbnail, index) => {
+              if (index === swiper.activeIndex) {
+                thumbnail.classList.add('opacity-50');
+                thumbnail.classList.remove('opacity-100');
+              } else {
+                thumbnail.classList.add('opacity-100');
+                thumbnail.classList.remove('opacity-50');
+              }
+            });
+          }}
+          modules={[Pagination, Navigation]}
+          className="w-full h-full max-h-[calc(85vh-120px)]"
+        >
+          {selectedCard.modalImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={image.default.src}
+                alt={`Image ${index + 1}`}
+                className="w-full xl:h-fit object-contain"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-              <a
-                href={selectedCard.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 text-blue-500 hover:text-blue-700 transition-colors"
-              >
-                Raporu Görüntüle
-              </a>
-            </div>
-            <div className="p-4 bg-gray-100 bg-opacity-70 flex justify-center space-x-4 overflow-x-auto px-4">
-              {selectedCard.modalImages.map((image, idx) => (
-                <img
-                  key={idx}
-                  src={image.default.src}
-                  alt={`${selectedCard.title} Thumbnail ${idx + 1}`}
-                  className={`thumbnail-image w-24 h-24 object-cover rounded-md cursor-pointer transition-transform transform hover:scale-105 ${idx === 0 ? 'opacity-50' : 'opacity-100'}`}
-                  onClick={() => swiperRef.current?.swiper?.slideTo(idx)}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+        <a
+          href={selectedCard.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 text-blue-500 hover:text-blue-700 transition-colors"
+        >
+          Raporu Görüntüle
+        </a>
+      </div>
+      <div className="p-4 bg-gray-100 bg-opacity-70 flex justify-center space-x-4 overflow-x-auto px-4">
+        {selectedCard.modalImages.map((image, idx) => (
+          <img
+            key={idx}
+            src={image.default.src}
+            alt={`${selectedCard.title} Thumbnail ${idx + 1}`}
+            className={`thumbnail-image w-20 h-20 object-cover rounded-md cursor-pointer transition-transform transform hover:scale-105 ${idx === 0 ? 'opacity-50' : 'opacity-100'}`}
+            onClick={() => swiperRef.current?.swiper?.slideTo(idx)}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 };

@@ -15,12 +15,12 @@ const Cardsdata = ({ searchTerm = '', category }) => {
   const cardsData = [
     {
       category: 'Customer Analytics',
-      title: 'Müşteri Segmentasyonu ve Hedefli Pazarlama',
-      description: 'Veri analitiği teknikleri kullanarak müşteri segmentlerini belirleme ve bu segmentlere yönelik hedefli pazarlama stratejileri geliştirme.',
-      technologies: [
-        'Python: Pandas ve Scikit-Learn kütüphaneleri kullanılarak müşteri segmentasyonu yapılmıştır.',
-        'K-Means: Müşteriler çeşitli segmentlere ayırmak için K-Means algoritması kullanılmıştır.',
-        'Data Visualization: Segmentlerin görselleştirilmesi için Matplotlib ve Seaborn kullanılmıştır.'
+      title: 'Müşteri Segmentasyonu ve Analizi',
+      description: 'Veri analitiği teknikleri kullanarak müşteri segmentlerini belirleme ve bu segmentlere yönelik stratejiler geliştirme.',
+      examples: [
+        'RFM analizi ile müşteri segmentlerinin belirlenmesi.',
+        'K-Means algoritması ile müşteri gruplarının ayrıştırılması.',
+        'Demografik ve davranışsal verilerin analiz edilmesi yoluyla segmentasyon yapılması.'
       ],
       technologiesList: [
         "Python", 
@@ -32,170 +32,160 @@ const Cardsdata = ({ searchTerm = '', category }) => {
       ]
     },
     {
-      category: 'Anomaly Detection',
-      title: 'Makine Öğrenmesi ile Anomali Tespiti',
-      description: 'Veri setlerinde olağandışı veya beklenmeyen veri noktalarını tespit etmek için makine öğrenmesi algoritmaları kullanılmıştır.',
-      technologies: [
-        'Python: TensorFlow ve Keras kütüphaneleri kullanılarak derin öğrenme modelleri oluşturulmuştur.',
-        'Autoencoder: Anomali tespiti için bir Autoencoder modeli eğitilmiştir.',
-        'Data Preprocessing: Verilerin normalizasyonu ve temizlenmesi için Pandas ve NumPy kullanılmıştır.'
+      category: 'Customer Sentiment Analysis',
+      title: 'Müşteri Duygu Analizi',
+      description: 'Müşteri geri bildirimleri ve sosyal medya verileri kullanılarak duygu analizi yapılması.',
+      examples: [
+        'Doğal dil işleme teknikleri ile müşteri geri bildirimlerinin analiz edilmesi.',
+        'Duygu analizi modelleri kullanılarak müşteri memnuniyeti değerlendirilmesi.',
+        'Sosyal medya verilerinden elde edilen içgörüler ile duygu analizi yapılması.'
       ],
       technologiesList: [
         "Python", 
-        "TensorFlow", 
-        "Keras", 
-        "Autoencoder", 
-        "Pandas", 
-        "NumPy"
+        "NLTK", 
+        "TextBlob", 
+        "VADER", 
+        "Scikit-Learn"
       ]
     },
     {
       category: 'Sales Forecasting',
       title: 'Satış Tahminleme ve Envanter Optimizasyonu',
-      description: 'Geçmiş satış verilerini analiz ederek gelecekteki talep tahminleri yapılmış ve envanter ihtiyaçları optimize edilmiştir.',
-      technologies: [
-        'Python: Statsmodels kütüphanesi kullanılarak zaman serisi analizi yapılmıştır.',
-        'ARIMA: ARIMA modeli kullanılarak satış tahminleri gerçekleştirilmiştir.',
-        'Data Visualization: Tahmin sonuçları Matplotlib ve Seaborn ile görselleştirilmiştir.'
+      description: 'Geçmiş satış verilerini analiz ederek gelecekteki talep tahminleri yapılması ve envanter ihtiyaçlarının optimize edilmesi.',
+      examples: [
+        'ARIMA modeli ile satış tahminlerinin gerçekleştirilmesi.',
+        'Zaman serisi analizi ile talep tahminleri yapılması.',
+        'Envanter yönetimi için stok seviyelerinin optimize edilmesi.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
-        "Statsmodels", 
         "ARIMA", 
-        "Matplotlib", 
-        "Seaborn"
+        "Statsmodels", 
+        "Pandas"
       ]
     },
     {
       category: 'Customer Churn',
       title: 'Müşteri Kayıp Analizi (Churn Analizi)',
-      description: 'Müşteri davranışlarını analiz ederek kayıp oranları belirlenmiş ve müşteri sadakatini artırma stratejileri geliştirilmiştir.',
-      technologies: [
-        'Python: Scikit-Learn kütüphanesi kullanılarak lojistik regresyon modeli eğitilmiştir.',
-        'Random Forest: Churn tahmini için Random Forest modeli kullanılmıştır.',
-        'Data Processing: Pandas ve NumPy kullanılarak veri ön işleme ve özellik mühendisliği gerçekleştirilmiştir.'
+      description: 'Müşteri davranışlarını analiz ederek kayıp oranlarının belirlenmesi ve kayıpların önlenmesi.',
+      examples: [
+        'Lojistik regresyon modeli ile churn tahminlerinin yapılması.',
+        'Müşteri davranışlarına dayalı olarak churn riskinin hesaplanması.',
+        'Veri madenciliği teknikleri ile churn modellerinin oluşturulması.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
         "Scikit-Learn", 
-        "Random Forest", 
-        "Pandas", 
-        "NumPy"
+        "Logistic Regression", 
+        "Random Forest"
       ]
     },
     {
       category: 'Marketing Analytics',
       title: 'Pazarlama Kampanyası Performans Analizi',
-      description: 'Kampanyaların başarısını ölçmek ve ROI\'yi artırmak için analitik yöntemler kullanarak kampanya verileri incelenmiştir.',
-      technologies: [
-        'Python: Pandas ve Numpy ile veri manipülasyonu yapılmıştır.',
-        'A/B Testing: Kampanyalar arasındaki performans farkını değerlendirmek için A/B testi yapılmıştır.',
-        'Data Visualization: Kampanya performansı Matplotlib ve Plotly ile görselleştirilmiştir.'
+      description: 'Kampanyaların başarısını ölçmek ve ROI\'yi artırmak için analitik yöntemler kullanarak kampanya verilerinin incelenmesi.',
+      examples: [
+        'A/B testleri ile kampanya performanslarının karşılaştırılması.',
+        'Pazarlama verilerinin analiz edilmesi yoluyla kampanya optimizasyonu yapılması.',
+        'ROI hesaplamaları ile kampanya etkinliğinin değerlendirilmesi.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
         "Pandas", 
         "A/B Testing", 
-        "Matplotlib", 
-        "Plotly"
+        "Matplotlib"
       ]
     },
     {
-      category: 'Data Visualization',
-      title: 'Veri Görselleştirme ve İş Zekası Dashboard Geliştirme',
-      description: 'Karmaşık veri setlerini görsel olarak anlamlı hale getiren etkileşimli iş zekası dashboardları oluşturulmuştur.',
-      technologies: [
-        'Python: Plotly ve Dash kütüphaneleri kullanılarak etkileşimli grafikler oluşturulmuştur.',
-        'Dashboard Design: Kullanıcı dostu arayüzler geliştirilmiş, veri filtreleme ve analiz imkanı sunulmuştur.',
-        'Data Processing: Büyük veri setleri Pandas ve Dask kullanılarak işlenmiştir.'
+      category: 'Customer Lifetime Value (CLTV) Prediction',
+      title: 'Müşteri Yaşam Boyu Değeri Tahmini',
+      description: 'Müşteri yaşam boyu değerinin tahmin edilmesi ve stratejik kararların alınması için bu değerin kullanılması.',
+      examples: [
+        'CLTV hesaplamaları ile müşteri segmentlerinin değerlendirilmesi.',
+        'Zaman serisi verileri kullanarak müşteri değerinin projeksiyonlarının yapılması.',
+        'Müşteri bağlılığını artırmak için CLTV modellerinin oluşturulması.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
-        "Plotly", 
-        "Dash", 
-        "Pandas", 
-        "Dask"
+        "LTV", 
+        "Cohort Analysis", 
+        "Pandas"
       ]
     },
     {
       category: 'Social Media Analytics',
       title: 'Sosyal Medya Analitiği ve Duygu Analizi',
-      description: 'Sosyal medya verilerini analiz ederek marka algısı ölçülmüş ve müşteri geri bildirimlerinden değerli içgörüler çıkarılmıştır.',
-      technologies: [
-        'Python: NLTK ve TextBlob kullanılarak duygu analizi gerçekleştirilmiştir.',
-        'Web Scraping: Sosyal medya verileri BeautifulSoup ve Scrapy ile toplanmıştır.',
-        'Data Visualization: Analiz sonuçları Matplotlib ve Seaborn ile görselleştirilmiştir.'
+      description: 'Sosyal medya verilerini analiz ederek marka algısını ölçmek ve müşteri geri bildirimlerinden içgörüler elde etmek.',
+      examples: [
+        'Sosyal medya verilerinin toplanması ve analiz edilmesi.',
+        'Duygu analizi ile müşteri memnuniyeti ve marka algısının değerlendirilmesi.',
+        'Geri bildirimlerin analiz edilmesi yoluyla stratejik kararların alınması.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
         "NLTK", 
         "TextBlob", 
-        "BeautifulSoup", 
-        "Scrapy"
+        "Seaborn"
       ]
     },
     {
       category: 'Time Series Forecasting',
       title: 'Zaman Serisi Analizi ile Talep Tahmini',
-      description: 'Zaman serisi verileri analiz edilerek talep tahminleri yapılmış ve bu tahminlere dayalı kararlar alınmıştır.',
-      technologies: [
-        'Python: Statsmodels ve Prophet kütüphaneleri ile zaman serisi modelleri oluşturulmuştur.',
-        'SARIMA: Talep tahmini için Seasonal ARIMA modeli kullanılmıştır.',
-        'Data Visualization: Zaman serisi verileri Matplotlib ve Seaborn ile görselleştirilmiştir.'
+      description: 'Zaman serisi verileri analiz edilerek talep tahminleri yapılması ve bu tahminlere dayalı kararlar alınması.',
+      examples: [
+        'Zaman serisi modelleri ile talep projeksiyonlarının yapılması.',
+        'SARIMA ve Prophet modelleri kullanarak tahminlerin gerçekleştirilmesi.',
+        'Sezonluk ve trend bileşenlerinin analiz edilmesi yoluyla talep tahmini yapılması.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
-        "Statsmodels", 
-        "Prophet", 
         "SARIMA", 
-        "Matplotlib", 
-        "Seaborn"
+        "Prophet", 
+        "Statsmodels"
       ]
     },
     {
-      category: 'Supply Chain Analytics',
-      title: 'Tedarik Zinciri Verimlilik Analizi',
-      description: 'Tedarik zinciri süreçlerindeki verileri analiz ederek verimlilik artırılmış ve maliyetler düşürülmüştür.',
-      technologies: [
-        'Python: Pandas ve NumPy kullanılarak veri analizi yapılmıştır.',
-        'Optimization: Tedarik zinciri optimizasyonu için Linear Programming ve PuLP kütüphanesi kullanılmıştır.',
-        'Data Visualization: Analiz sonuçları Plotly ve Matplotlib ile görselleştirilmiştir.'
+      category: 'Customer Retention Analysis',
+      title: 'Müşteri Tutma Analizi',
+      description: 'Mevcut müşterilerin elde tutulmasını sağlamak amacıyla müşteri davranışlarını ve memnuniyetini analiz etme.',
+      examples: [
+        'Müşteri memnuniyeti anketlerinin analizi.',
+        'Müşteri davranış verilerinin analiz edilmesi yoluyla sadakat programlarının optimize edilmesi.',
+        'Müşteri bağlılığını artırmaya yönelik stratejilerin geliştirilmesi.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
-        "Pandas", 
-        "NumPy", 
-        "Linear Programming", 
-        "PuLP"
+        "Churn Analysis", 
+        "Retention Modeling", 
+        "Pandas"
       ]
     },
     {
       category: 'Recommendation Systems',
       title: 'Ürün Öneri Sistemi Optimizasyonu',
-      description: 'Kullanıcı davranış verileri analiz edilerek öneri sistemlerinin performansı artırılmıştır.',
-      technologies: [
-        'Python: Scikit-Learn ve Surprise kütüphaneleri ile öneri algoritmaları geliştirilmiştir.',
-        'Collaborative Filtering: Kullanıcı bazlı işbirlikçi filtreleme modeli kullanılmıştır.',
-        'Data Processing: Veri ön işleme ve özellik mühendisliği Pandas ve NumPy ile yapılmıştır.'
+      description: 'Kullanıcı davranış verilerini analiz ederek öneri sistemlerinin performansını artırma.',
+      examples: [
+        'İşbirlikçi filtreleme yöntemleri ile ürün önerilerinin kişiselleştirilmesi.',
+        'Öneri algoritmalarının performans değerlendirmelerinin yapılması.',
+        'Kullanıcı etkileşim verilerine dayalı olarak öneri sistemlerinin optimizasyonu.'
       ],
       technologiesList: [
         "Python", 
         "SQL", 
         "Scikit-Learn", 
         "Surprise", 
-        "Collaborative Filtering", 
-        "Pandas", 
-        "NumPy"
+        "Collaborative Filtering"
       ]
-    },
+    }
   ];
+  
 
 
 
@@ -233,36 +223,36 @@ const Cardsdata = ({ searchTerm = '', category }) => {
 
 {selectedCard && (
   <div className="fixed inset-0 backdrop-blur-sm bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300">
-    <div className="bg-gray-100 w-full max-w-3xl h-auto md:h-auto relative rounded-lg shadow-lg flex flex-col z-60 overflow-hidden mx-4 md:mx-8 my-8 md:my-16">
+    <div className="bg-gray-100 w-full max-w-3xl h-auto relative rounded-lg shadow-lg flex flex-col overflow-hidden mx-4 md:mx-8 my-8 md:my-16">
       <button
-        className="absolute top-2 right-4 text-gray-400 bg-opacity-70 p-2 z-70 focus:outline-none transition-transform transform hover:text-gray-700"
+        className="absolute top-2 right-4 text-gray-400 bg-opacity-70 p-2 focus:outline-none transition-transform transform hover:text-gray-700"
         onClick={closeModal}
         style={{ zIndex: 1000 }}
       >
         <XMarkIcon aria-hidden="true" className="h-8 w-8" />
       </button>
-      <div className="flex-grow flex flex-col justify-center items-center relative pt-16 px-4 md:px-8">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedCard.title}</h3>
-        <p className="text-gray-700 mb-4">{selectedCard.description}</p>
+      <div className="flex-grow flex flex-col justify-center items-center pt-16 px-4 md:px-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">{selectedCard.title}</h3>
+        <p className="text-gray-600 mb-6 text-center">{selectedCard.description}</p>
       </div>
       <div className="bg-white w-full">
-        <div className="p-4 mx-4">
-        <h4 className="text-lg font-semibold text-gray-800 mb-2">Kullanılan Teknolojiler:</h4>
-          <p className="text-gray-700">
+        <div className="p-6">
+          <h4 className="text-lg font-semibold text-gray-800 mb-3">Kullanılan Teknolojiler:</h4>
+          <p className="text-gray-700 mb-4">
             {selectedCard.technologiesList.join(' | ')}
           </p>
-          <h4 className="mt-4 text-lg font-semibold text-gray-800 mb-2">Kullanılan Teknolojiler:</h4>
-          <ul className="list-disc list-inside text-gray-700">
-            {selectedCard.technologies.map((tech, idx) => (
+          <h4 className="mt-4 text-lg font-semibold text-gray-800 mb-3">Yapılan İşlemler:</h4>
+          <ul className="space-y-2 list-disc list-inside text-gray-700">
+            {selectedCard.examples.map((tech, idx) => (
               <li key={idx}>{tech}</li>
             ))}
           </ul>
-
         </div>
       </div>
     </div>
   </div>
 )}
+
 
 
 
