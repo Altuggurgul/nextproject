@@ -4,7 +4,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Bars3Icon, BellIcon, CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import React, { useState, useEffect } from 'react';
-import logo from '@/images/Group 6.svg';
+import logo from '@/images/altug.svg';
 import {
   Combobox,
   ComboboxInput,

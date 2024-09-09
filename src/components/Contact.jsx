@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import logo from '@/images/Group 7.svg';
+import logo from '@/images/altug_blue.svg';
 
 const topics = [
   { id: 1, name: 'Raporlama ve Dashboard Oluşturma' },
