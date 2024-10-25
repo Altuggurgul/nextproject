@@ -1,8 +1,8 @@
 'use client'
 import Gallery from '@/components/Gallery'
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel, Listbox, Menu, MenuButton, MenuItem, MenuItems, Popover } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon, BellIcon, CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, BellIcon, CheckIcon, InformationCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import React, { useState, useEffect } from 'react';
 import logo from '@/images/altug.svg';
 import {
@@ -15,82 +15,10 @@ import {
 } from '@headlessui/react';
 import Link from 'next/link'
 import { useRouter } from 'next/router';
+import { cardsData } from '@/app/data/page';
+import { ChevronUpDownIcon } from '@heroicons/react/24/solid'
 
 
-const items = [
-  {
-    category: 'Sales',
-    name: 'Rapor 1',
-    description: 'Bu, finans sektörüne yönelik bir raporun özetini içerir.',
-    link: 'https://www.example.com/finance-report'
-  },
-  {
-    category: 'Sales',
-    name: 'Rapor 2',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://www.example.com/sales-report'
-  },
-  {
-    category: 'Sales',
-    name: 'Rapor 3',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://www.example.com/hr-report'
-  },
-  {
-    category: 'Marketing',
-    name: 'Rapor 4',
-    description: 'Pazarlama stratejileri ve müşteri kazanımı üzerine analizler.',
-    link: 'https://www.example.com/marketing-report'
-  },
-  {
-    category: 'Sales',
-    name: 'Rapor 5',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://www.example.com/marketing-trends'
-  },
-  {
-    category: 'HR',
-    name: 'Rapor 6',
-    description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
-    link: 'https://www.example.com/marketing-trends'
-  },
-  {
-    category: 'Marketing',
-    name: 'Rapor 7',
-    description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
-    link: 'https://www.example.com/marketing-trends'
-  },
-  {
-    category: 'Marketing',
-    name: 'Rapor 8',
-    description: 'Pazar eğilimleri ve kampanya başarılarının incelendiği rapor.',
-    link: 'https://www.example.com/marketing-trends'
-  },
-  {
-    category: 'Finance',
-    name: 'Rapor 9',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'Marketing',
-    name: 'Rapor 10',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'HR',
-    name: 'Rapor 11',
-    description: 'İnsan kaynakları süreçleri ve performans değerlendirmeleri.',
-    link: 'https://www.example.com/marketing-trends'
-  },
-  {
-    category: 'Sales',
-    name: 'Rapor 12',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiMzhlODAxYzctNTBmYS00NGU3LTg1ZWItYzI4ZjM3NzZlZTQ4IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-];
 
 
 const navigation = [
@@ -108,34 +36,38 @@ function classNames(...classes) {
 export default function Example() {
   const [query, setQuery] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  
 
   const filteredItems =
     query === ''
       ? []
-      : items.filter((item) =>
-          item.name.toLowerCase().includes(query.toLowerCase())
+      : cardsData.filter((item) =>
+          item.category.toLowerCase().includes(query.toLowerCase())
         );
   
-        const categories = ['All', ...new Set(items.map(item => item.category))];
+        const categories = ['All', ...new Set(cardsData.map(item => item.category))];
 
         const [selectedCategory, setSelectedCategory] = useState('All');
 
         const categoryCounts = {
-          All: items.length,
+          All: cardsData.length,
           ...categories.reduce((acc, category) => {
             if (category !== 'All') {
-              acc[category] = items.filter(item => item.category === category).length;
+              acc[category] = cardsData.filter(item => item.category === category).length;
             }
             return acc;
           }, {}),
-        };
-
-        const [isAuthenticated, setIsAuthenticated] = useState(false); // Giriş durumu
-        const handleLinkClick = (e, requiresAuth) => {
-          if (requiresAuth && !isAuthenticated) {
-            e.preventDefault(); // Linkin normal davranışını engelle
-            window.location.href = '/login'; // Kullanıcıyı login sayfasına yönlendir
-          }
         };
 
   return (
@@ -148,48 +80,19 @@ export default function Example() {
         <body class="h-full">
         ```
       */}
-      <div className="min-h-full">
-        <div className="bg-indigo-600 pb-32">
-          <Disclosure as="nav" className="border-b border-indigo-300 border-opacity-25 bg-indigo-600 lg:border-none">
+      <div className="min-h-full bg-slate-100">
+        <div className="bg-gray-800 pb-32">
+          <Disclosure as="nav" className="border-b border-indigo-300 border-opacity-25 bg-gray-800 lg:border-none">
             <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
               <div className="relative flex h-16 items-center justify-between lg:border-b lg:border-indigo-400 lg:border-opacity-25">
-                <div className="flex items-center px-2 lg:px-0">
-                  <div className="flex-shrink-0">
-                    <img
-                      alt="Your Company"
-                      src={logo.src}
-                      className="block h-8 w-auto"
-                    />
-                  </div>
-                  <div className="hidden lg:ml-10 lg:block">
-                    <div className="flex space-x-4">
-                    {navigation.map((item) => (
-        <Link href={item.href} key={item.name} legacyBehavior>
-          <a
-            onClick={(e) => handleLinkClick(e, item.requiresAuth)}
-            aria-current={item.current ? 'page' : undefined}
-            className={classNames(
-              item.current
-                ? 'bg-indigo-700 text-white'
-                : 'text-white hover:bg-indigo-500 hover:bg-opacity-75',
-              'rounded-md px-3 py-2 text-sm font-medium',
-            )}
-          >
-            {item.name}
-          </a>
-        </Link>
-      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
-      <div className="w-full max-w-lg lg:max-w-xs">
+                <div className="flex flex-1 justify-center px-2 lg:ml-0 lg:justify-start">
+      <div className="hidden w-full max-w-lg lg:max-w-xs">
         <Combobox
           as="div"
           value={searchTerm}
           onChange={(item) => {
-            setSearchTerm(item?.name || '');
-            setQuery(item?.name || '');
+            setSearchTerm(item?.category || '');
+            setQuery(item?.category || '');
           }}
         >
           <div className="relative">
@@ -231,7 +134,7 @@ export default function Example() {
                               selected ? 'font-medium' : 'font-normal'
                             }`}
                           >
-                            {item.name}
+                            {item.category}
                           </span>
                           {selected && (
                             <span
@@ -257,30 +160,73 @@ export default function Example() {
       </div>
     </div>
   
-                <div className="flex lg:hidden">
-                  {/* Mobile menu button */}
-                  <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-indigo-600 p-2 text-indigo-200 hover:bg-indigo-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
-                    <span className="absolute -inset-0.5" />
-                    <span className="sr-only">Open main menu</span>
-                    <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
-                    <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
-                  </DisclosureButton>
-                </div>
-                <div className="hidden lg:ml-4 lg:block">
-                  <div className="flex items-center">
-                    <button
-                      type="button"
-                      className="relative flex-shrink-0 rounded-full bg-indigo-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
-                    >
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">View notifications</span>
-                      <BellIcon aria-hidden="true" className="h-6 w-6" />
-                    </button>
 
-                    {/* Profile dropdown */}
+                {/* POPOVER INFO */}
+                <div className=" lg:ml-4 lg:block">
+      <div className="flex items-center">
+        <Popover className="relative">
+          <Popover.Button
+            className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-0"
+          >
+            <span className="absolute -inset-1.5" />
+            <span className="sr-only">View notifications</span>
+            <InformationCircleIcon aria-hidden="true" className="h-6 w-6" strokeWidth={2.0} />
+          </Popover.Button>
 
-                  </div>
+          <Popover.Panel className="absolute left-4 z-10 mt-3 w-80 max-w-md bg-white rounded-2xl shadow-xl p-6 transform -translate-x-full">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">İletişim</h2>
+            <div className="px-4 pb-5 pt-5 sm:px-0 sm:pt-0 font-display">
+              <dl className="space-y-8 px-4 sm:space-y-6 sm:px-0">
+                <div>
+                  <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">Ad</dt>
+                  <dd className="mt-1 text-sm text-gray-900 sm:col-span-2">
+                    <p>Altuğ Gürgül</p>
+                  </dd>
                 </div>
+                <div>
+                  <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">E-posta</dt>
+                  <dd className="mt-1 text-sm text-gray-900 sm:col-span-2">altug.gurgul@gmail.com</dd>
+                </div>
+                <div>
+                  <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">Telefon</dt>
+                  <dd className="mt-1 text-sm text-gray-900 sm:col-span-2">+90 0536 311 5412</dd>
+                </div>
+                <div>
+                  <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">İletişim</dt>
+                  <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 flex items-center space-x-4">
+                    {/* LinkedIn Icon */}
+                    <a href="https://www.linkedin.com/in/altuggurgul" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src="/027-linkedin.svg"
+                        alt="LinkedIn"
+                        className="w-6 h-6 hover:opacity-80"
+                      />
+                    </a>
+
+                    {/* WhatsApp Icon */}
+                    <a href="https://wa.me/905363115412" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src="/005-whatsapp.svg"
+                        alt="WhatsApp"
+                        className="w-6 h-6 hover:opacity-80"
+                      />
+                    </a>
+                    {/* Gmail Icon */}
+                    <a href="mailto:altug.gurgul@gmail.com" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src="/gmail.svg"
+                        alt="WhatsApp"
+                        className="w-6 h-6 hover:opacity-80"
+                      />
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </Popover.Panel>
+        </Popover>
+      </div>
+    </div>
               </div>
             </div>
 
@@ -308,27 +254,47 @@ export default function Example() {
           <div className="relative py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center lg:flex-row lg:justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-white">POWER BI Dashboard</h1>
+          <h1 className="text-center lg:text-left text-3xl sm:text-4xl font-bold tracking-tight text-white">POWER BI Rapor Örnekleri</h1>
         </div>
-        <div className="w-full max-w-lg mt-4 lg:mt-0">
-          <Tab.Group onChange={(index) => setSelectedCategory(categories[index])}>
-            <Tab.List className="flex space-x-1 rounded-xl bg-gray-800 p-1">
-              {categories.map((category) => (
-                <Tab
-                  key={category}
-                  className={({ selected }) =>
-                    classNames(
-                      'w-full py-2.5 text-sm leading-5 font-medium text-white rounded-lg',
-                      selected ? 'bg-blue-600 shadow' : 'text-blue-100 hover:bg-gray-700 hover:text-white'
-                    )
-                  }
-                >
-                  {category} ({categoryCounts[category]})
-                </Tab>
-              ))}
-            </Tab.List>
-          </Tab.Group>
-        </div>
+        {/* TAB BÖLÜMÜ */}
+        <Listbox value={selectedCategory} onChange={setSelectedCategory}>
+      <label className="block text-sm font-medium leading-6 text-gray-900">Kategori Seç</label>
+      <div className="relative mt-2 w-full max-w-xs">
+        <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <span className="block truncate">{selectedCategory}</span>
+          <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+            <ChevronUpDownIcon aria-hidden="true" className="h-5 w-5 text-gray-400" />
+          </span>
+        </Listbox.Button>
+
+        <Listbox.Options
+          className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+        >
+          {categories.map((category) => (
+            <Listbox.Option
+              key={category}
+              value={category}
+              className={({ active }) =>
+                `relative cursor-default select-none py-2 pl-8 pr-4 ${
+                  active ? 'bg-indigo-600 text-white' : 'text-gray-900'
+                }`
+              }
+            >
+              <span className={`block truncate ${selectedCategory === category ? 'font-semibold' : 'font-normal'}`}>
+                {category} ({categoryCounts[category]})
+              </span>
+
+              {selectedCategory === category ? (
+                <span className="absolute inset-y-0 left-0 flex items-center pl-1.5 text-indigo-600">
+                  <CheckIcon aria-hidden="true" className="h-5 w-5" />
+                </span>
+              ) : null}
+            </Listbox.Option>
+          ))}
+        </Listbox.Options>
+      </div>
+    </Listbox>
+
       </div>
 
     </div>
