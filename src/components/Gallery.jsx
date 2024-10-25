@@ -7,7 +7,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { cardsData } from '@/app/data/page';
+import { cardsData } from '../data/cards';
+
+
 
 
 

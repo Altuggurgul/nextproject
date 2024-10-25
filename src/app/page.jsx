@@ -15,7 +15,7 @@ import {
 } from '@headlessui/react';
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import { cardsData } from '@/app/data/page';
+import { cardsData } from '@/data/cards';
 import { ChevronUpDownIcon } from '@heroicons/react/24/solid'
 
 
