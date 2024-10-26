@@ -1,17 +1,6 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import React, { useState, useRef } from 'react';
 import { cardsData } from '../data/cards';
-
-
-
-
 
 const Cards = ({ searchTerm = '', category }) => {
   const [selectedCard, setSelectedCard] = useState(null);

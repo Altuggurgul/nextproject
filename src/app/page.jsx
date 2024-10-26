@@ -1,9 +1,9 @@
 'use client'
 import Gallery from '@/components/Gallery'
-import { Disclosure, DisclosureButton, DisclosurePanel, Listbox, Menu, MenuButton, MenuItem, MenuItems, Popover } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel, Listbox, Popover } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon, BellIcon, CheckIcon, InformationCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import React, { useState, useEffect } from 'react';
+import { Bars3Icon, BellIcon, CheckIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
+import React, { useState } from 'react';
 import logo from '@/images/altug.svg';
 import {
   Combobox,
@@ -11,10 +11,8 @@ import {
   ComboboxOption,
   ComboboxOptions,
   Transition,
-  Tab
 } from '@headlessui/react';
 import Link from 'next/link'
-import { useRouter } from 'next/router';
 import { cardsData } from '@/data/cards';
 import { ChevronUpDownIcon } from '@heroicons/react/24/solid'
 
@@ -72,14 +70,6 @@ export default function Example() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full bg-slate-100">
         <div className="bg-gray-800 pb-32">
           <Disclosure as="nav" className="border-b border-indigo-300 border-opacity-25 bg-gray-800 lg:border-none">
@@ -259,7 +249,7 @@ export default function Example() {
         {/* TAB BÖLÜMÜ */}
         <Listbox value={selectedCategory} onChange={setSelectedCategory}>
       <label className="hidden text-sm font-medium leading-6 text-gray-900">Kategori Seç</label>
-      <div className="relative mt-2 w-full max-w-xs">
+      <div className="relative mt-4 sm:mt-2 w-full max-w-xs">
         <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
           <span className="block truncate">{selectedCategory}</span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
