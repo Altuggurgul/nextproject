@@ -75,80 +75,12 @@ export default function Example() {
           <Disclosure as="nav" className="border-b border-indigo-300 border-opacity-25 bg-gray-800 lg:border-none">
             <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
               <div className="relative flex h-16 items-center justify-between lg:border-b lg:border-indigo-400 lg:border-opacity-25">
-                <div className="flex flex-1 justify-center px-2 lg:ml-0 lg:justify-start">
-      <div className="hidden w-full max-w-lg lg:max-w-xs">
-        <Combobox
-          as="div"
-          value={searchTerm}
-          onChange={(item) => {
-            setSearchTerm(item?.category || '');
-            setQuery(item?.category || '');
-          }}
-        >
-          <div className="relative">
-            <MagnifyingGlassIcon
-              className="pointer-events-none absolute left-4 top-2.5 h-5 w-5 text-gray-400"
-              aria-hidden="true"
-            />
-            <ComboboxInput
-              className="h-10 w-full rounded-md border-0 bg-white pl-10 pr-3 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
-              placeholder="Search..."
-              onChange={(event) => {
-                setQuery(event.target.value);
-                setSearchTerm(event.target.value);
-              }}
-            />
-            <Transition
-              as="div" // Fragment yerine "div" kullanıyoruz
-              leave="transition ease-in duration-100"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-              afterLeave={() => setQuery('')}
-            >
-              {filteredItems.length > 0 && (
-                <ComboboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                  {filteredItems.map((item) => (
-                    <ComboboxOption
-                      key={item.id}
-                      value={item}
-                      className={({ active }) =>
-                        `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                          active ? 'bg-indigo-600 text-white' : 'text-gray-900'
-                        }`
-                      }
-                    >
-                      {({ selected, active }) => (
-                        <>
-                          <span
-                            className={`block truncate ${
-                              selected ? 'font-medium' : 'font-normal'
-                            }`}
-                          >
-                            {item.category}
-                          </span>
-                          {selected && (
-                            <span
-                              className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                                active ? 'text-white' : 'text-indigo-600'
-                              }`}
-                            >
-                              <MagnifyingGlassIcon
-                                className="h-5 w-5"
-                                aria-hidden="true"
-                              />
-                            </span>
-                          )}
-                        </>
-                      )}
-                    </ComboboxOption>
-                  ))}
-                </ComboboxOptions>
-              )}
-            </Transition>
-          </div>
-        </Combobox>
-      </div>
+
+    <div className="flex flex-1 justify-start px-2 lg:ml-0 lg:justify-start">
+    <div className=" w-full max-w-lg lg:max-w-lg">
+    <h1 className=" lg:text-left text-base sm:text-lg font-semibold tracking-tight text-gray-400">POWER BI</h1>
     </div>
+</div>
   
 
                 {/* POPOVER INFO */}
@@ -160,7 +92,7 @@ export default function Example() {
           >
             <span className="absolute -inset-1.5" />
             <span className="sr-only">View notifications</span>
-            <InformationCircleIcon aria-hidden="true" className="h-6 w-6" strokeWidth={2.0} />
+            <InformationCircleIcon aria-hidden="true" className="h-6 w-6 lg:size-8" strokeWidth={2.0} />
           </Popover.Button>
 
           <Popover.Panel className="absolute left-4 z-10 mt-3 w-80 max-w-md bg-white rounded-2xl shadow-xl p-6 transform -translate-x-full">
@@ -219,27 +151,6 @@ export default function Example() {
     </div>
               </div>
             </div>
-
-            <DisclosurePanel className="lg:hidden">
-              <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-            <DisclosureButton
-              onClick={(e) => handleLinkClick(e, item.requiresAuth)}
-              key={item.name}
-              as="div"
-              aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-indigo-700 text-white' : 'text-white hover:bg-indigo-500 hover:bg-opacity-75',
-                'block rounded-md px-3 py-2 text-base font-medium'
-              )}
-            >
-              <Link href={item.href} passHref legacyBehavior>
-                <a className="block w-full h-full">{item.name}</a>
-              </Link>
-            </DisclosureButton>
-          ))}
-              </div>
-            </DisclosurePanel>
           </Disclosure>
           <div className="relative py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center lg:flex-row lg:justify-between">
@@ -248,42 +159,47 @@ export default function Example() {
         </div>
         {/* TAB BÖLÜMÜ */}
         <Listbox value={selectedCategory} onChange={setSelectedCategory}>
-      <label className="hidden text-sm font-medium leading-6 text-gray-900">Kategori Seç</label>
-      <div className="relative mt-4 sm:mt-2 w-full max-w-xs">
-        <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
-          <span className="block truncate">{selectedCategory}</span>
-          <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-            <ChevronUpDownIcon aria-hidden="true" className="h-5 w-5 text-gray-400" />
-          </span>
-        </Listbox.Button>
+  <div className="flex flex-col w-full max-w-xs">
+    <label className="hidden lg:block text-sm font-medium leading-6 text-gray-100">Kategori Seç</label>
+    <div className="relative mt-4 lg:mt-2 w-full">
+      <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        <span className="block truncate">{selectedCategory}</span>
+        <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+          <ChevronUpDownIcon aria-hidden="true" className="h-5 w-5 text-gray-400" />
+        </span>
+      </Listbox.Button>
 
-        <Listbox.Options
-          className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-        >
-          {categories.map((category) => (
-            <Listbox.Option
-              key={category}
-              value={category}
-              className={({ active }) =>
-                `relative cursor-default select-none py-2 pl-8 pr-4 ${
-                  active ? 'bg-indigo-600 text-white' : 'text-gray-900'
-                }`
-              }
-            >
-              <span className={`block truncate ${selectedCategory === category ? 'font-semibold' : 'font-normal'}`}>
-                {category} ({categoryCounts[category]})
+      <Listbox.Options
+        className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+      >
+        {categories.map((category) => (
+          <Listbox.Option
+            key={category}
+            value={category}
+            className={({ active }) =>
+              `relative cursor-default select-none py-2 pl-8 pr-4 ${
+                active ? 'bg-indigo-600 text-white' : 'text-gray-900'
+              }`
+            }
+          >
+            <span className={`block truncate ${selectedCategory === category ? 'font-semibold' : 'font-normal'}`}>
+              {category} ({categoryCounts[category]})
+            </span>
+
+            {selectedCategory === category ? (
+              <span className="absolute inset-y-0 left-0 flex items-center pl-1.5 text-indigo-600">
+                <CheckIcon aria-hidden="true" className="h-5 w-5" />
               </span>
+            ) : null}
+          </Listbox.Option>
+        ))}
+      </Listbox.Options>
+    </div>
+  </div>
+</Listbox>
 
-              {selectedCategory === category ? (
-                <span className="absolute inset-y-0 left-0 flex items-center pl-1.5 text-indigo-600">
-                  <CheckIcon aria-hidden="true" className="h-5 w-5" />
-                </span>
-              ) : null}
-            </Listbox.Option>
-          ))}
-        </Listbox.Options>
-      </div>
-    </Listbox>
+
+
 
       </div>
 
