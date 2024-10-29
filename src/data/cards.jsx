@@ -12,6 +12,8 @@ import resim11 from '@/images/Report11/HR_Da_page_1.png';
 import resim12 from '@/images/Report12/Satıs_page_1.png';
 import resim13 from '@/images/Report13/fp_20_page_1.png';
 import resim14 from '@/images/Report14/fp_20_page_1.png';
+import resim15 from '@/images/Report15/HR_Da_page_1.png';
+import resim16 from '@/images/Report16/REPFi_page_1.png';
 
 const importAllImages = (r) => {
     return r.keys().map(r);
@@ -31,7 +33,8 @@ const report11Images = importAllImages(require.context('@/images/Report11', fals
 const report12Images = importAllImages(require.context('@/images/Report12', false, /\.(jpe?g|png)$/));
 const report13Images = importAllImages(require.context('@/images/Report13', false, /\.(jpe?g|png)$/));
 const report14Images = importAllImages(require.context('@/images/Report14', false, /\.(jpe?g|png)$/));
-
+const report15Images = importAllImages(require.context('@/images/Report15', false, /\.(jpe?g|png)$/));
+const report16Images = importAllImages(require.context('@/images/Report16', false, /\.(jpe?g|png)$/));
 
 export const cardsData = [
     {
@@ -142,6 +145,22 @@ export const cardsData = [
       category: 'E-commerce',
       imageSrc: resim14,
       modalImages: report14Images,
+      title: 'Rapor 13',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'HR',
+      imageSrc: resim15,
+      modalImages: report15Images,
+      title: 'Rapor 13',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Finance',
+      imageSrc: resim16,
+      modalImages: report16Images,
       title: 'Rapor 13',
       description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
