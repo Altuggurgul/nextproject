@@ -14,6 +14,13 @@ import resim13 from '@/images/Report13/fp_20_page_1.png';
 import resim14 from '@/images/Report14/fp_20_page_1.png';
 import resim15 from '@/images/Report15/HR_Da_page_1.png';
 import resim16 from '@/images/Report16/REPFi_page_1.png';
+import resim17 from '@/images/Report17/20_Cu_page_1.png';
+import resim18 from '@/images/Report18/21_Ex_page_1.png';
+import resim19 from '@/images/Report19/22_Pr_page_1.png';
+import resim20 from '@/images/Report20/23_Re_page_1.png';
+import resim21 from '@/images/Report21/24_HR_page_1.png';
+import resim22 from '@/images/Report22/25_Cr_page_1.png';
+import resim23 from '@/images/Report23/26_ca_page_1.png';
 
 const importAllImages = (r) => {
     return r.keys().map(r);
@@ -35,8 +42,103 @@ const report13Images = importAllImages(require.context('@/images/Report13', fals
 const report14Images = importAllImages(require.context('@/images/Report14', false, /\.(jpe?g|png)$/));
 const report15Images = importAllImages(require.context('@/images/Report15', false, /\.(jpe?g|png)$/));
 const report16Images = importAllImages(require.context('@/images/Report16', false, /\.(jpe?g|png)$/));
+const report17Images = importAllImages(require.context('@/images/Report17', false, /\.(jpe?g|png)$/));
+const report18Images = importAllImages(require.context('@/images/Report18', false, /\.(jpe?g|png)$/));
+const report19Images = importAllImages(require.context('@/images/Report19', false, /\.(jpe?g|png)$/));
+const report20Images = importAllImages(require.context('@/images/Report20', false, /\.(jpe?g|png)$/));
+const report21Images = importAllImages(require.context('@/images/Report21', false, /\.(jpe?g|png)$/));
+const report22Images = importAllImages(require.context('@/images/Report22', false, /\.(jpe?g|png)$/));
+const report23Images = importAllImages(require.context('@/images/Report23', false, /\.(jpe?g|png)$/));
 
 export const cardsData = [
+  {
+    category: 'CRM',
+    imageSrc: resim13,
+    modalImages: report13Images,
+    title: 'Rapor 13',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'E-commerce',
+    imageSrc: resim14,
+    modalImages: report14Images,
+    title: 'Rapor 13',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'HR',
+    imageSrc: resim15,
+    modalImages: report15Images,
+    title: 'Rapor 13',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'Finance',
+    imageSrc: resim16,
+    modalImages: report16Images,
+    title: 'Rapor 16',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'Customer',
+    imageSrc: resim17,
+    modalImages: report17Images,
+    title: 'Rapor 17',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'Finance',
+    imageSrc: resim18,
+    modalImages: report18Images,
+    title: 'Rapor 18',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'Sales-Budget',
+    imageSrc: resim19,
+    modalImages: report19Images,
+    title: 'Rapor 19',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'Customer',
+    imageSrc: resim20,
+    modalImages: report20Images,
+    title: 'Rapor 20',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'HR',
+    imageSrc: resim21,
+    modalImages: report21Images,
+    title: 'Rapor 21',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'Sales',
+    imageSrc: resim22,
+    modalImages: report22Images,
+    title: 'Rapor 22',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
+  {
+    category: 'Call Center',
+    imageSrc: resim23,
+    modalImages: report23Images,
+    title: 'Rapor 23',
+    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+  },
     {
       category: 'Sales',
       imageSrc: resim1,
@@ -133,36 +235,5 @@ export const cardsData = [
       description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
-    {
-      category: 'CRM',
-      imageSrc: resim13,
-      modalImages: report13Images,
-      title: 'Rapor 13',
-      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-    },
-    {
-      category: 'E-commerce',
-      imageSrc: resim14,
-      modalImages: report14Images,
-      title: 'Rapor 13',
-      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-    },
-    {
-      category: 'HR',
-      imageSrc: resim15,
-      modalImages: report15Images,
-      title: 'Rapor 13',
-      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-    },
-    {
-      category: 'Finance',
-      imageSrc: resim16,
-      modalImages: report16Images,
-      title: 'Rapor 13',
-      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-    },
+
   ];
