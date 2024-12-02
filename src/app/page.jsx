@@ -155,7 +155,7 @@ export default function Example() {
           <div className="relative py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center lg:flex-row lg:justify-between">
         <div>
-          <h1 className="text-center lg:text-left text-3xl sm:text-4xl font-bold tracking-tight text-white">POWER BI Rapor Örnekleri</h1>
+          <h1 className="text-center lg:text-left text-3xl sm:text-4xl font-bold tracking-tight text-white">POWER BI Raporlar</h1>
         </div>
         {/* TAB BÖLÜMÜ */}
         <Listbox value={selectedCategory} onChange={setSelectedCategory}>
