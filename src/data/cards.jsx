@@ -83,62 +83,6 @@ export const cardsData = [
     description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
     link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
   },
-  {
-    category: 'Customer',
-    imageSrc: resim17,
-    modalImages: report17Images,
-    title: 'Rapor 17',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'Finance',
-    imageSrc: resim18,
-    modalImages: report18Images,
-    title: 'Rapor 18',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'Sales-Budget',
-    imageSrc: resim19,
-    modalImages: report19Images,
-    title: 'Rapor 19',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'Customer',
-    imageSrc: resim20,
-    modalImages: report20Images,
-    title: 'Rapor 20',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'HR',
-    imageSrc: resim21,
-    modalImages: report21Images,
-    title: 'Rapor 21',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'Sales',
-    imageSrc: resim22,
-    modalImages: report22Images,
-    title: 'Rapor 22',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
-  {
-    category: 'Call Center',
-    imageSrc: resim23,
-    modalImages: report23Images,
-    title: 'Rapor 23',
-    description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
-    link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
-  },
     {
       category: 'Sales',
       imageSrc: resim1,
@@ -232,6 +176,62 @@ export const cardsData = [
       imageSrc: resim12,
       modalImages: report12Images,
       title: 'Rapor 12',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Customer',
+      imageSrc: resim17,
+      modalImages: report17Images,
+      title: 'Rapor 17',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Finance',
+      imageSrc: resim18,
+      modalImages: report18Images,
+      title: 'Rapor 18',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Sales-Budget',
+      imageSrc: resim19,
+      modalImages: report19Images,
+      title: 'Rapor 19',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Customer',
+      imageSrc: resim20,
+      modalImages: report20Images,
+      title: 'Rapor 20',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'HR',
+      imageSrc: resim21,
+      modalImages: report21Images,
+      title: 'Rapor 21',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Sales',
+      imageSrc: resim22,
+      modalImages: report22Images,
+      title: 'Rapor 22',
+      description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
+    },
+    {
+      category: 'Call Center',
+      imageSrc: resim23,
+      modalImages: report23Images,
+      title: 'Rapor 23',
       description: 'Satış performansını analiz eden önemli metrikler ve trendler.',
       link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9'
     },
