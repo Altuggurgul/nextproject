@@ -97,8 +97,8 @@ export default function Example() {
 
           <Popover.Panel className="absolute left-4 z-10 mt-3 w-80 max-w-md bg-white rounded-2xl shadow-xl p-6 transform -translate-x-full">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">İletişim</h2>
-            <div className="px-4 pb-5 pt-5 sm:px-0 sm:pt-0 font-display">
-              <dl className="space-y-8 px-4 sm:space-y-6 sm:px-0">
+            <div className="px-0 pb-5 pt-5 sm:px-0 sm:pt-0 font-display">
+              <dl className="space-y-8 px-2 sm:space-y-6 sm:px-0">
                 <div>
                   <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0">Ad</dt>
                   <dd className="mt-1 text-sm text-gray-900 sm:col-span-2">
