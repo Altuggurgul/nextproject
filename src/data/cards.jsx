@@ -23,6 +23,7 @@ import resim22 from '@/images/Report22/25_Cr_page_1.png';
 import resim23 from '@/images/Report23/26_ca_page_1.png';
 import resim24 from '@/images/Report24/1. Xm_page_1.png';
 import resim25 from '@/images/Report25/CRM Sayfa1.png';
+import resim26 from '@/images/Report26/Candy_page_1.png';
 
 const importAllImages = (r) => {
     return r.keys().map(r);
@@ -53,8 +54,51 @@ const report22Images = importAllImages(require.context('@/images/Report22', fals
 const report23Images = importAllImages(require.context('@/images/Report23', false, /\.(jpe?g|png)$/));
 const report24Images = importAllImages(require.context('@/images/Report24', false, /\.(jpe?g|png)$/));
 const report25Images = importAllImages(require.context('@/images/Report25', false, /\.(jpe?g|png)$/));
+const report26Images = importAllImages(require.context('@/images/Report26', false, /\.(jpe?g|png)$/));
 
 export const cardsData = [
+    {
+        category: 'Sales',
+        imageSrc: resim26,
+        modalImages: report26Images,
+        title: 'Candy Market Share Analysis Dashboard',
+        "description": "Bu dashboard, şekerleme pazarındaki satış gelirlerini, ürün türlerini, üretici performansını, paketleme türlerini ve dağıtım kanallarını analiz eder. Pazar büyümesi, satış eğilimleri ve ürün kategorilerine göre performans sunarak karar almayı kolaylaştırır.",
+        link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9',
+        "insights": [
+            {
+                "title": "Toplam Satış Geliri ve İşlem Sayısı",
+                "description": "Toplam satış geliri $213M olarak gerçekleşirken, işlem sayısı 175K'ya ulaştı. Bir önceki yıla göre %7.5 büyüme görüldü."
+            },
+            {
+                "title": "Ürün Türlerine Göre Satış Gelirleri",
+                "description": "Cips $97M ile en yüksek geliri elde ederken, bisküvi ($68M) ve gofret ($14M) diğer popüler ürün türleri oldu."
+            },
+            {
+                "title": "Yıl Bazlı Satış Karşılaştırması",
+                "description": "2023'te aylık satış hacmi 2022'ye kıyasla Mart hariç tüm aylarda artış gösterdi. Aralık ayında %9.56 büyüme kaydedildi."
+            },
+            {
+                "title": "Üreticilere Göre Satış Geliri",
+                "description": "Royal Blends Group ($70M) ve Sterling Foods ($21M) pazar liderleri olarak öne çıktı."
+            },
+            {
+                "title": "Marka Performansı",
+                "description": "Land Corp. ($40M) en yüksek satış gelirini elde eden marka olurken, Fusion Snacks ($21M) ve Vista Goods ($19M) takip etti."
+            },
+            {
+                "title": "Paketleme Türlerine Göre Satış Hacmi",
+                "description": "Ürünlerin çoğu torbalarda (11.2M) paketlenirken, kutu ve akış sargı paket türleri daha düşük satış hacmi gösterdi."
+            },
+            {
+                "title": "Dağıtım Kanallarına Göre Satış",
+                "description": "Küçük ve özel mağazalar, toplam satışın %80.1'ini oluştururken, süpermarketler %19.9'luk katkı sağladı."
+            },
+            {
+                "title": "En Çok Satan Ürünler",
+                "description": "Crusty Cheddar ($7.2M) en çok satan ürün olurken, Fine Slices Sour Cream and Spring Onions ve Chips Blue Cheese diğer popüler ürünler arasında yer aldı."
+            }
+        ],
+    },
     {
         category: 'CRM',
         imageSrc: resim25,
