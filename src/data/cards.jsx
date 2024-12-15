@@ -21,6 +21,8 @@ import resim20 from '@/images/Report20/23_Re_page_1.png';
 import resim21 from '@/images/Report21/24_HR_page_1.png';
 import resim22 from '@/images/Report22/25_Cr_page_1.png';
 import resim23 from '@/images/Report23/26_ca_page_1.png';
+import resim24 from '@/images/Report24/1. Xm_page_1.png';
+import resim25 from '@/images/Report25/CRM Sayfa1.png';
 
 const importAllImages = (r) => {
     return r.keys().map(r);
@@ -49,8 +51,94 @@ const report20Images = importAllImages(require.context('@/images/Report20', fals
 const report21Images = importAllImages(require.context('@/images/Report21', false, /\.(jpe?g|png)$/));
 const report22Images = importAllImages(require.context('@/images/Report22', false, /\.(jpe?g|png)$/));
 const report23Images = importAllImages(require.context('@/images/Report23', false, /\.(jpe?g|png)$/));
+const report24Images = importAllImages(require.context('@/images/Report24', false, /\.(jpe?g|png)$/));
+const report25Images = importAllImages(require.context('@/images/Report25', false, /\.(jpe?g|png)$/));
 
 export const cardsData = [
+    {
+        category: 'CRM',
+        imageSrc: resim25,
+        modalImages: report25Images,
+        title: 'CRM Pipeline Satış Analizi',
+        "description": "Bu dashboard, satış hunisi performansını analiz ederken toplam anlaşma değeri, kapanan satışlar, kayıp anlaşmalar ve müşteri dönüşüm oranlarına dair kapsamlı içgörüler sunar. Satış temsilcilerinin performansını ve endüstri bazlı trendleri inceleyerek stratejik karar almayı kolaylaştırır.",
+        link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9',
+        "insights": [
+            {
+                "title": "Toplam Anlaşma Değeri",
+                "description": "Toplam anlaşma değeri $8,3M olarak gerçekleşti. Bunun $931,3K'sı kapanan anlaşmalardan elde edildi."
+            },
+            {
+                "title": "Kapanan ve Kayıp Anlaşmalar",
+                "description": "Kapanan anlaşma sayısı 348 iken kayıp anlaşma sayısı 61 olarak gerçekleşti. Kayıp oranı %2 seviyesinde."
+            },
+            {
+                "title": "En Yüksek Performans Gösteren Satış Temsilcileri",
+                "description": "Laura Thompson, toplam $218,624 değerinde anlaşma kapatarak en iyi performansı sergiledi. Michael Brown ve Jessica Martinez de öne çıkan temsilciler arasında yer aldı."
+            },
+            {
+                "title": "Endüstri Bazlı Kapanan Anlaşmalar",
+                "description": "IT & IT Hizmetleri, Ulaşım ve Profesyonel Hizmetler en yüksek kapanan anlaşma sayılarına sahip endüstriler oldu."
+            },
+            {
+                "title": "Müşteri Terk Oranı",
+                "description": "Toplam churn müşteri sayısı 177 olup, %59'luk bir terk oranı gözlemlendi."
+            },
+            {
+                "title": "Aylık Kapanan Anlaşma Trendleri",
+                "description": "Nisan ve Mayıs aylarında kapanan anlaşmalar zirve yaptı, Ağustos ve Eylül aylarında düşüş görüldü."
+            },
+            {
+                "title": "Satış Ürünlerine Göre Dağılım",
+                "description": "SAAS ürünleri %45 ile en yüksek kapanan anlaşma oranına sahipken, hizmetler ve özel çözümler diğer ürün kategorilerini oluşturdu."
+            },
+            {
+                "title": "Endüstri Bazlı Kayıp Anlaşmalar",
+                "description": "Hükümet, Tarım ve Bankacılık sektörlerinde kayıp anlaşma oranı en yüksek seviyelerde gerçekleşti."
+            }
+        ],
+    },
+    {
+        category: 'Sales',
+        imageSrc: resim24,
+        modalImages: report24Images,
+        title: 'Yılbaşı Hediye Satış Analizi',
+        "description": "Bu dashboard, yılbaşı hediye satışlarını müşteri segmentasyonu, kanal performansı, kârlılık ve ülke bazlı analizlerle detaylı bir şekilde sunar. Satış eğilimlerini, müşteri davranışlarını ve en çok tercih edilen ürünleri analiz ederek stratejik karar almayı kolaylaştırır.",
+        link: 'https://app.powerbi.com/view?r=eyJrIjoiYzRjZWRiMGYtYTg3ZC00NGFjLWJhZWQtNDcxM2Q3Yjc0MWY1IiwidCI6IjlmZTNjZTM5LTIwOWQtNGM5NS1hMWQxLWViZjA0NjY3NDkyYyIsImMiOjl9',
+        "insights": [
+            {
+                "title": "Toplam Satışlar ve Kâr",
+                "description": "Son sezon toplam satış €7,09M ve kâr €5,45M olarak gerçekleşti, önceki sezona göre %1,9'luk bir artış gösterdi."
+            },
+            {
+                "title": "En İyi Performans Gösteren Ülkeler",
+                "description": "İsveç, Hollanda ve Almanya en yüksek satış rakamlarını elde eden ülkeler arasında yer aldı."
+            },
+            {
+                "title": "Müşteri Segmentasyonu",
+                "description": "1-11 yaş arası ürün grubu müşteriler satışların %39'unu oluştururken, erkek ve kadın müşteriler arasında oran %49-%51 olarak gerçekleşti."
+            },
+            {
+                "title": "Satış Kanalları Performansı",
+                "description": "Satışların %74'ü mağaza içi alışverişte gerçekleşirken, online ve yılbaşı pazarları da önemli katkılar sağladı."
+            },
+            {
+                "title": "Ödeme Yöntemleri",
+                "description": "Nakit ödeme, 1-11 yaş arası ürün grubu müşteriler arasında %86 oranında tercih edilirken, yetişkinler daha fazla kredi kartı ve PayPal kullanmayı tercih etti."
+            },
+            {
+                "title": "En Çok Satan Ürünler ve Kategoriler",
+                "description": "Oyuncaklar (%15,8), giyim (%11,4) ve aksesuarlar (%9,9) en çok tercih edilen ürün kategorileri oldu."
+            },
+            {
+                "title": "Ay Bazlı Satış Analizi",
+                "description": "Aralık ayında satışlar zirve yaptı (%77), Ocak ayında ise %45 seviyelerine geriledi."
+            },
+            {
+                "title": "Müşteri Alışveriş Alışkanlıkları",
+                "description": "Çocuklar ve gençler sabah saatlerinde alışveriş yaparken, yetişkinler akşam saatlerini tercih etti."
+            }
+        ],
+    },
   {
     category: 'CRM',
     imageSrc: resim13,
